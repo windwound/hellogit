@@ -1,4 +1,4 @@
-// hellogit.cpp : �������̨Ӧ�ó������ڵ㡣
+﻿// hellogit.cpp : 定义控制台应用程序的入口点。
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 #include <string>
 using namespace std;
 
-template<typename T> inline size_t _sizeof(T p)
+template<typename T> size_t _sizeof(T p)                       //去掉inline
 {
 	return (char*)(&p+1)-(char*)(&p);
 }
@@ -70,7 +70,7 @@ public:
 
 		return *this;
 	}
-	inline int GetLength() const
+	int GetLength() const  //在内部定义可以省略inline 编译器自动内联
 	{
 		return m_nLen;
 	}
